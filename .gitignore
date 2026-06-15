@@ -1,0 +1,21 @@
+# 下载输出（所有下载内容都在此目录下）
+zsxq_downloads/
+
+# 缓存和状态
+zsxq_topics_cache.json
+zsxq_fetch_state.json
+download_progress.json
+zsxq_cookies.json
+
+# 浏览器数据
+zsxq_browser_profile/
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.env
+
+# IDE
+.vscode/
+.idea/
