@@ -35,7 +35,7 @@ from curl_cffi import requests as cffi_requests
 
 TOKEN = os.environ.get("ZSXQ_TOKEN", "")
 PREFERRED_GROUP_NAME = "精益智造资料库"
-SAVE_DIR = Path("./zsxq_downloads")
+SAVE_DIR = Path("C:/Users/admin/Desktop/zsxq_downloads")
 PAGE_SIZE = 30
 
 DOWNLOAD_IMAGES = True
