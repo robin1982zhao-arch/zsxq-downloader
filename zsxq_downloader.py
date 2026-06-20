@@ -612,7 +612,7 @@ def main():
         already_verified = 0
 
         for i, item in enumerate(all_file_items):
-            fname = safe_filename(item.get("name", item.get("topic_id", "")))[:60]
+            fname = safe_filename(item.get("name", str(item.get("topic_id", ""))))[:60]
             file_id = item.get("file_id", "")
             progress_key = file_id or item.get("url", "")
 
@@ -656,8 +656,8 @@ def main():
         new = skip = fail = 0
         for i, item in enumerate(images):
             progress_key = item.get("url", "")
-            fname = item.get("topic_id", "") + item.get("ext", ".jpg")
-            topic_name = safe_filename(item.get("title", item.get("topic_id", "")))
+            fname = str(item.get("topic_id", "")) + item.get("ext", ".jpg")
+            topic_name = safe_filename(item.get("title", str(item.get("topic_id", ""))))
             save_path = group_dir / "images" / topic_name / fname
 
             if progress.get(progress_key) or save_path.exists():
